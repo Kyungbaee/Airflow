@@ -12,7 +12,7 @@ with DAG(
     tb_cycle_using_status = SeoulApiToCsvOperator(
         task_id = 'tb_cycle_using_status',
         dataset_nm='tbCycleUseStatus',
-        path='opt/airflow/files/tbCycleUseStatus/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodast}}',
+        path='opt/airflow/files/tbCycleUseStatus/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodash}}',
         file_name='tbCycleUseStatus.csv',
         base_dt='2024-06-01'
     )
